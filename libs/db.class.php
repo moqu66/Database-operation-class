@@ -10,7 +10,7 @@ class DB
     {
         try {
             $dsn = DBtype . ":host=" . DBhost . ";port=" . DBport . ";dbname=" . DBname;
-            $this->pdo = new PDO($dsn, DBuser, DBpass, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8mb4",PDO::ATTR_PERSISTENT => true));
+            $this->pdo = new PDO($dsn, DBuser, DBpass, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8mb4"));
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
             echo 'Error:<br/>';
